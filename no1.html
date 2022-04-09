@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>KarirPad loop</h2>
+<button>Click me</button>
+<div>
+	<ol></ol>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("button").hide();
+    for(i=1;i<=100;) {
+
+	if (i%3 == 0 && i%5 == 0){
+		$("ol").append("<li>KarirPad</li>");
+	} else if (i%3 == 0) {
+		$("ol").append("<li>Karir</li>");
+	} else if (i%5 == 0) {
+		$("ol").append("<li>Pad</li>");
+	} else {
+		$("ol").append("<li>"+i+"</li>");
+	}
+	i++;
+	};
+  });
+});
+</script>
+</html>
